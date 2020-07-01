@@ -1,0 +1,16 @@
+<!-- <div>
+  <ng-container *ngTemplateOutlet="alert; context: {text: 'outside'}"></ng-container>
+  <mat-card>
+    <h2>Title</h2>
+    <p>Here's some content</p>
+    <ng-container *ngTemplateOutlet="alert; context: {text: 'inside'}"></ng-container>
+  </mat-card>
+</div> -->
+
+
+<ng-template #alert let-text="text">
+  <div class="alert">
+    <div>Here's some alert:</div>
+    <div>{{text}}</div>
+  </div>
+</ng-template>

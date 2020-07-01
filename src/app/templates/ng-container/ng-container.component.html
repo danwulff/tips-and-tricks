@@ -1,0 +1,15 @@
+<div>
+  <button mat-raised-button (click)="isFree = !isFree" style="margin-right: 1rem;">toggle</button>isFree: {{isFree}}
+
+  <div *ngIf="isFree">
+    Welcome back {{name}}
+  </div>
+
+  <div *ngIf="isFree">
+    <a href="">Upgrade to premium now!</a>
+  </div>
+
+  <div>
+    Thanks for using experian
+  </div>
+</div>

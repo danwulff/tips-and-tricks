@@ -19,8 +19,7 @@
   </mat-menu>
   
   <mat-menu #templates="matMenu">
-    <a routerLink="/templates/one" mat-menu-item>Syntax</a>
-    <a routerLink="/templates/two" mat-menu-item>Property binding</a>
+    <a *ngFor="let template of templatesArray" [routerLink]="['/templates/'+ template.path]" mat-menu-item>{{template.path | titlecase}}</a>
   </mat-menu>
   
   <router-outlet></router-outlet>
