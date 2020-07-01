@@ -14,7 +14,7 @@ import { SyntaxComponent } from './templates/syntax/syntax.component';
 import { PropertyBindingComponent } from './templates/property-binding/property-binding.component';
 import { NgContainerComponent } from './templates/ng-container/ng-container.component';
 import { NgTemplateComponent } from './templates/ng-template/ng-template.component';
-import { from } from 'rxjs';
+import { ScratchPadComponent } from './scratch-pad/scratch-pad.component';
 
 export const templates: Route[] = [{
   path: 'syntax',
@@ -45,6 +45,7 @@ const routes: Routes = [{
     PropertyBindingComponent,
     NgContainerComponent,
     NgTemplateComponent,
+    ScratchPadComponent
   ],
   imports: [
     BrowserModule,

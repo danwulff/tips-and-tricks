@@ -1,17 +1,14 @@
-<!-- attribute binding Less performant! (elem recreated each change detection) -->
-<button [attr.aria-label]="actionName">{{actionName}} with Aria</button>
-<button [data.tms]="tmsValue">tms attr</button>
-
-<!-- class binding options -->
-<div class="" [class]="" [ngClass]=""></div>
-
-<!-- [class] options -->
-<div [class]="'warning'">string</div>
-<div [class]="{warning: isWarningAlert, read: isRead}">object</div>
-<div [class]="['warning read']">array</div>
-
-<!-- single class -->
-<div [class.error]="hasError">single class</div>
-
-<!-- [ngClass] Less performant!! -->
-<div [ngClass]="isRead: 'read' : ''">expression</div>
+<ng-container [ngSwitch]="currentState">
+  <div *ngSwitchCase="states.Loading">
+    Loading...
+  </div>
+  <div *ngSwitchCase="states.Error">
+    Alert!
+  </div>
+  <div *ngSwitchCase="states.Success">
+    Content
+  </div>
+  <div *ngSwitchDefault>
+    Something went wrong
+  </div>
+</ng-container>
