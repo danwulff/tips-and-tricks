@@ -10,12 +10,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { SyntaxComponent } from './templates/syntax/syntax.component';
+import { PropertyBindingComponent } from './templates/property-binding/property-binding.component';
 
 const routes: Routes = [{
   path: 'templates',
   children: [{
     path: 'one',
     component: SyntaxComponent
+  }, {
+    path: 'two',
+    component: PropertyBindingComponent
   }]
 }, {
   path: 'typescript',
@@ -26,6 +30,7 @@ const routes: Routes = [{
   declarations: [
     AppComponent,
     SyntaxComponent,
+    PropertyBindingComponent,
   ],
   imports: [
     BrowserModule,

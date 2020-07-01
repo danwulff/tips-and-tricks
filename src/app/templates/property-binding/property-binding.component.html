@@ -1,0 +1,17 @@
+<button mat-raised-button color="primary">Normal button</button><br>
+<button mat-raised-button color="primary" disabled>Disabled through attribute</button><br>
+
+<mat-divider style="width: 100%;"></mat-divider>
+
+<button mat-raised-button color="primary" [disabled]="disabled">property binding</button><br>
+
+<!-- Attribute binding is Less performant! -->
+<!-- <button mat-raised-button color="primary" disabled [attr.disabled]="disabled ? 'disabled' : null">attribute binding!</button>Don't do this<br> -->
+
+<!-- Attribute interpolation is also Less performant! -->
+<!-- <button mat-raised-button color="primary" disabled="{{disabled ? 'disabled : null'}}">attribute binding!</button>Don't do this<br> -->
+
+<mat-divider style="width: 100%"></mat-divider>
+
+<button mat-button (click)="toggleDisabled()">Toggle disabled</button><br>
+
