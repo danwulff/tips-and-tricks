@@ -9,34 +9,26 @@ import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes, Route } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { SyntaxComponent } from './templates/syntax/syntax.component';
 import { PropertyBindingComponent } from './templates/property-binding/property-binding.component';
 import { NgContainerComponent } from './templates/ng-container/ng-container.component';
 import { NgTemplateComponent } from './templates/ng-template/ng-template.component';
 import { ScratchPadComponent } from './scratch-pad/scratch-pad.component';
+import { NgForComponent } from './templates/ng-for/ng-for.component';
+import { DomTypesComponent } from './typescript/dom-types/dom-types.component';
+import { typescript, templates } from './routes';
 
-export const templates: Route[] = [{
-  path: 'syntax',
-  component: SyntaxComponent
-}, {
-  path: 'property',
-  component: PropertyBindingComponent
-}, {
-  path: 'container',
-  component: NgContainerComponent
-}, {
-  path: 'template',
-  component: NgTemplateComponent
-}]
-
-const routes: Routes = [{
-  path: 'templates',
-  children: [...templates]
-}, {
-  path: 'typescript',
-  children: []
-}];
+const routes: Routes = [
+  {
+    path: 'typescript',
+    children: [...typescript]
+  },
+  {
+    path: 'templates',
+    children: [...templates]
+  }
+];
 
 @NgModule({
   declarations: [
@@ -45,7 +37,9 @@ const routes: Routes = [{
     PropertyBindingComponent,
     NgContainerComponent,
     NgTemplateComponent,
-    ScratchPadComponent
+    ScratchPadComponent,
+    NgForComponent,
+    DomTypesComponent
   ],
   imports: [
     BrowserModule,

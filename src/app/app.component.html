@@ -14,8 +14,7 @@
   </mat-menu>
   
   <mat-menu #typescript="matMenu">
-    <a mat-menu-item>one</a>
-    <a mat-menu-item>two</a>
+    <a *ngFor="let typescript of typescriptArray" [routerLink]="['/typescript/'+ typescript.path]" mat-menu-item>{{typescript.path | titlecase}}</a>
   </mat-menu>
   
   <mat-menu #templates="matMenu">

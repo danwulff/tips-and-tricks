@@ -11,7 +11,4 @@ enum States {
   templateUrl: './scratch-pad.component.html',
   styleUrls: ['./scratch-pad.component.scss']
 })
-export class ScratchPadComponent {
-  states = States;
-  currentState= States.Loading;
-}
+export class ScratchPadComponent {}

@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { templateSourceUrl } from '@angular/compiler';
-import { templates } from './app.module';
+import { Component } from '@angular/core';
+import { templates, typescript } from './routes';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   templatesArray = templates;
-  ngOnInit(): void {
-    console.log('templates', this.templatesArray);
-  }
+  typescriptArray = typescript;
 }
