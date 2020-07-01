@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="nav">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a routerLink="/" style="color: white;">
+    <h1>Tips & Tricks</h1>
+  </a>
+</mat-toolbar>
+
+<div style="padding: 1rem;">
+  <mat-menu #nav="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="typescript">Typescript</button>
+    <button mat-menu-item [matMenuTriggerFor]="templates">Templates</button>
+  </mat-menu>
+  
+  <mat-menu #typescript="matMenu">
+    <a mat-menu-item>one</a>
+    <a mat-menu-item>two</a>
+  </mat-menu>
+  
+  <mat-menu #templates="matMenu">
+    <a mat-menu-item>one</a>
+    <a mat-menu-item>two</a>
+  </mat-menu>
+  
+  <router-outlet></router-outlet>
+</div>
