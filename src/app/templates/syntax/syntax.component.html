@@ -1,0 +1,9 @@
+
+<p>Current customer: {{ currentCustomer?.name }}</p>
+<!-- <p [innerText]="'CurrentCustomer: ' + currentCustomer?.name"></p> -->
+
+<h3 [class]='currentCustomer?.type'>Welcome Back</h3>
+
+<button mat-raised-button (click)="handleSignIn(currentCustomer)">Sign In</button>
+<!-- handleSignIn($event.target) -->
+<!-- handleSignIn($event.target) -->

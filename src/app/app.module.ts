@@ -9,10 +9,14 @@ import { MatDividerModule } from '@angular/material/divider';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { SyntaxComponent } from './templates/syntax/syntax.component';
 
 const routes: Routes = [{
   path: 'templates',
-  children: []
+  children: [{
+    path: 'one',
+    component: SyntaxComponent
+  }]
 }, {
   path: 'typescript',
   children: []
@@ -21,6 +25,7 @@ const routes: Routes = [{
 @NgModule({
   declarations: [
     AppComponent,
+    SyntaxComponent,
   ],
   imports: [
     BrowserModule,
